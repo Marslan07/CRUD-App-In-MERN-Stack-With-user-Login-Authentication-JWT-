@@ -19,7 +19,7 @@ const Users = () => {
 
   const getAllUsers=async()=>{
     const res=await getUsers();
-    setUsers(res.data);
+    setUsers(res);
     console.log(res);
   }
 

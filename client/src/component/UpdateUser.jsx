@@ -24,7 +24,7 @@ const UpdateUser = () => {
 
     const loadUserData= async ()=>{
       const res= await getUser(id)
-      setUser(res.data)
+      setUser(res)
     }
 
     const navigate=useNavigate()

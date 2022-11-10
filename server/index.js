@@ -1,7 +1,7 @@
 import express  from "express";
 import connection from "./Database/db.js";
 import Routes from "./routes/UserRoute.js"
-import HomeRoute from "./routes/HomeRoute.js"
+// import HomeRoute from "./routes/HomeRoute.js"
 import cors from "cors"
 import dotenv from "dotenv"
 import bodyParser from "body-parser";

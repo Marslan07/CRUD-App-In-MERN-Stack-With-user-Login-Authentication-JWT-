@@ -26,6 +26,7 @@ export const addUser= async (data)=>{
 //     }
 
 // return Api({url:`/user/useradded/add`, method:'get', data:data});
+
 return Api.post(`/user/useradded/add`, data)
 
 }
@@ -80,7 +81,7 @@ export const getUser=async(id)=>{
     // }
 // return Api({url:`/user/get/${id}` , method:'get'});
 
-return Api.get(`/user/get/${id}`)
+return Api.post(`/user/get/${id}`)
 
 }
 export const updateUser= async(user,id)=>{
@@ -105,8 +106,6 @@ export const updateUser= async(user,id)=>{
 
 // return Api({url:`/user/update/${id}`, method:'post', data:user});
 return Api.post(`/user/update/${id}`,user)
-
-
 }
 
 export const deleteUser=async(id)=>{
@@ -145,8 +144,7 @@ export const loginUser=async(credentials)=>{
                 localStorage.setItem("user",JSON.stringify(res.data.result))
             }
             return res.data;
-            // console.log(res.data)
-        })  
+        })
     } catch (error) {
        return console.log('erro while calling LoginUser Api' ,error)
         

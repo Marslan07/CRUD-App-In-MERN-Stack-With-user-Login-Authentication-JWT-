@@ -7,7 +7,7 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import "./Signin.css"
 const Signin = () => {
-
+debugger
   const initialValue={email:'',password:''}
   const [credentials,setCredentials]=useState(initialValue)
   const navigate = useNavigate();
@@ -32,16 +32,14 @@ const Signin = () => {
 
     
     const handleSubmit = async () => {
-      debugger
       if(credentials.email ==="" || credentials.password ===""){
-        navigate('/login')
+        navigate('/')
         toast.warn("please filled the input");
         console.log("please filled the input");
   
       }
       else
       {
-        debugger
         const UserLogedIn= await loginUser(credentials);
         console.log('verify is: ' + UserLogedIn)
 
@@ -54,12 +52,9 @@ const Signin = () => {
         }
         else{
           toast.warn('invalid username or password');
-          navigate('/login');
+          navigate('/');
         }
       }
-  
-      
-     
     };
   
  
